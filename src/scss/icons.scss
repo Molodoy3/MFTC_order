@@ -1,0 +1,69 @@
+@font-face {
+    font-family: "icons";
+    src: url("../fonts/icons.ttf") format("woff"), url("../fonts/icons.woff2") format("woff2");
+    font-display: swap;
+    font-display: block;
+    font-style: normal;
+    font-weight: normal;
+  }
+  %ic {
+    font-family: "icons";
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-asx-font-smoothing: grasyscale;
+  }
+  
+  [class^="icon-"],
+  [class*="icon-"] {
+    &::before {
+      @extend %ic;
+      display: block;
+    }
+}
+
+.icon-arrow-menu:before {
+  content: "\e90c";
+}
+.icon-cards:before {
+  content: "\e903";
+}
+.icon-more:before {
+  content: "\e905";
+}
+.icon-comments:before {
+  content: "\e907";
+}
+.icon-mfc:before {
+  content: "\e908";
+}
+.icon-views:before {
+  content: "\e90a";
+}
+.icon-auto:before {
+  content: "\e900";
+}
+.icon-geolocation:before {
+  content: "\e901";
+}
+.icon-login:before {
+  content: "\e902";
+}
+.icon-play:before {
+  content: "\e904";
+}
+.icon-youTube:before {
+  content: "\e906";
+}
+.icon-mortgage:before {
+  content: "\e909";
+}
+.icon-home:before {
+  content: "\e90b";
+}
+.icon-Enforcement-proceedings:before {
+  content: "\e90d";
+}
