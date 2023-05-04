@@ -31,6 +31,28 @@ function windowLoad() {
         });
     }
     
+    const ourCasesMainElement = document.querySelector('.our-cases__main');
+    if (ourCasesMainElement) {
+        let width = window.innerWidth >= 1480 ? 720 : (window.innerWidth - 40) / 2;
+        ourCasesMainElement.style.cssText = `margin-left: calc(50% - ${width}px);`;
+        window.addEventListener('resize', function (){
+            let width = window.innerWidth >= 1480 ? 720 : (window.innerWidth - 40) / 2;
+            ourCasesMainElement.style.cssText = `margin-left: calc(50% - ${width}px);`;
+        });
+    }
+
+    const columnsMenuFooter = document.querySelectorAll('.footer__col-menu');
+    if (columnsMenuFooter.length) {
+        columnsMenuFooter.forEach(col => {
+            const elements = col.querySelectorAll('.footer__col-menu>li');
+            if (elements.length) {
+                elements.forEach(elem => {
+                    elem.dataset.da = '.footer__mobile,767.98,last';
+                });
+            }
+        });
+    }
+
     const da = new DynAdapt("max");
     da.init();
 

@@ -61,6 +61,18 @@ export function delegationClick() {
             document.body.classList.remove('lock');
         }
 
+        if (targetElement.closest('.footer__mobile>li')) {
+            if (document.querySelector('.footer__mobile>li.active')) {
+                document.querySelector('.footer__mobile>li.active').classList.remove('active');
+            }
+            targetElement.closest('.footer__mobile>li').classList.toggle('active');
+            document.body.classList.add('lock');
+            e.preventDefault();
+        } else if(!targetElement.closest('.footer__mobile ul')) {
+            document.querySelector('.footer__mobile>li.active').classList.remove('active');
+            document.body.classList.remove('lock');
+        }
+
         //?Табы
         //Это добавить в app.js, если изначально видны не все табы
         /*
